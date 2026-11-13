@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172820">
+  <meta name="description" content="Discover the coastal heritage, local landmarks, nature escapes and living culture of Mira-Bhayandar.">
+  <title>Mira Heritage — Find the soul of the coast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress"></div>
+  <div class="announcement"><span class="pulse-dot"></span> A LOCAL GUIDE TO THE STORIES, SPACES & PEOPLE OF MIRA-BHAYANDAR <a href="#explore">START EXPLORING ↗</a></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Mira Heritage home"><span class="brand-symbol">M<span>H</span></span><span class="brand-name">MIRA <i>HERITAGE</i><small>THE COAST HAS STORIES</small></span></a>
+    <button class="menu-button" id="menuButton" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#explore">Explore</a><a href="#stories">Our story</a><a href="#experiences">Experiences</a><a href="#community">Community</a><a href="#reviews">Reviews</a>
+      <button class="saved-nav" id="showSaved" aria-label="Show saved places">♡ <span id="savedCount">0</span></button>
+      <a class="nav-cta" href="#plan">Plan your visit <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-photo"></div><div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow light"><span></span> MIRA-BHAYANDAR · MAHARASHTRA</div>
+        <p class="hero-overline">NOT JUST A PLACE. A THOUSAND STORIES.</p>
+        <h1>Find the soul<br>of the <em>coast.</em></h1>
+        <p class="hero-description">From quiet shores and centuries-old landmarks to neighbourhood traditions — discover the side of Mira-Bhayandar that deserves to be remembered.</p>
+        <div class="hero-buttons"><a class="button button-coral" href="#explore">Explore the city <span>↗</span></a><a class="button button-ghost" href="#stories">Discover our story <span>↓</span></a></div>
+        <div class="hero-foot"><span>19°17' N&nbsp; 72°51' E</span><span class="hero-foot-line"></span><span>THE NORTHERN EDGE OF MUMBAI</span></div>
+      </div>
+      <div class="hero-side-note">COASTAL ROOTS · LIVING CULTURE · LOCAL PRIDE</div>
+      <a class="scroll-cue" href="#explore"><span></span> SCROLL TO DISCOVER</a>
+    </section>
+
+    <section class="ticker" aria-label="Explore themes"><div class="ticker-track"><span>LOCAL STORIES</span><b>✳</b><span>COASTAL HERITAGE</span><b>✳</b><span>HIDDEN GEMS</span><b>✳</b><span>COMMUNITY FIRST</span><b>✳</b><span>LOCAL STORIES</span><b>✳</b><span>COASTAL HERITAGE</span><b>✳</b><span>HIDDEN GEMS</span><b>✳</b><span>COMMUNITY FIRST</span><b>✳</b></div></section>
+
+    <section class="intro section-pad" id="stories">
+      <div class="section-index">01 <span>— THE IDEA</span></div>
+      <div class="intro-layout">
+        <div><p class="eyebrow"><span></span> A CITY WITH MANY LAYERS</p><h2>Some places are<br>visited. Others are<br><em>felt.</em></h2></div>
+        <div class="intro-copy"><p class="large-copy">Mira-Bhayandar holds a remarkable mix of coastal life, historic landmarks, faith, green spaces and community traditions.</p><p>Yet many of these places and the people behind them remain outside the usual travel conversation. Mira Heritage brings them into one thoughtful guide — so visitors can explore with curiosity and local communities can be seen, valued and supported.</p><a class="under-link" href="#community">Why local stories matter <span>↗</span></a></div>
+      </div>
+      <div class="intro-bottom"><span>OUR PURPOSE</span><div>DISCOVER <b>·</b> CONNECT <b>·</b> PRESERVE <b>·</b> CELEBRATE</div><span>EST. 2026</span></div>
+    </section>
+
+    <section class="explore-section section-pad" id="explore">
+      <div class="section-index">02 <span>— THE CITY GUIDE</span></div>
+      <div class="section-heading"><div><p class="eyebrow"><span></span> YOUR NEXT LOCAL DISCOVERY</p><h2>Explore beyond<br>the <em>usual.</em></h2></div><p class="section-aside">A handpicked guide to places around Mira-Bhayandar. Save your favourites, open directions and build your own little city trail.</p></div>
+      <div class="explore-tools">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search places, neighbourhoods, experiences..." autocomplete="off"><kbd>↵</kbd></label>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-chip active" data-filter="all">All places <span>12</span></button>
+          <button class="filter-chip" data-filter="heritage">Heritage</button>
+          <button class="filter-chip" data-filter="coast">Coast & nature</button>
+          <button class="filter-chip" data-filter="spiritual">Spiritual</button>
+          <button class="filter-chip" data-filter="leisure">Parks & leisure</button>
+        </div>
+        <div class="results-line"><span id="resultsCount">12 places to explore</span><button id="clearFilters" class="clear-button">CLEAR FILTERS ×</button></div>
+      </div>
+      <div class="place-grid" id="placeGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>No places found</h3><p>Try a different keyword or category.</p><button class="button button-dark" id="resetSearch">Show all places</button></div>
+      <div class="directory-foot"><span>CURATED WITH LOCAL CURIOSITY</span><span>PLACE DETAILS & VISITING CONDITIONS CAN CHANGE — CHECK BEFORE YOU GO.</span></div>
+    </section>
+
+    <section class="feature-band">
+      <div class="feature-image"></div><div class="feature-content"><p class="eyebrow light"><span></span> THE COASTAL SIDE OF THE CITY</p><p class="feature-number">FIELD NOTE Nº 01</p><h2>Where the<br>land meets the<br><em>Arabian Sea.</em></h2><p>Uttan, Dongri and the surrounding coastal belt hold a distinctive rhythm shaped by fishing communities, shorelines, faith and everyday life.</p><a href="#explore" class="button button-light">Find coastal places <span>↗</span></a></div>
+    </section>
+
+    <section class="experiences-section section-pad" id="experiences">
+      <div class="section-index">03 <span>— MAKE A DAY OF IT</span></div>
+      <div class="section-heading"><div><p class="eyebrow"><span></span> SMALL PLANS, GOOD MEMORIES</p><h2>Choose your<br><em>kind of day.</em></h2></div><p class="section-aside">Pick a mood, find a few places and make a simple local itinerary. Your selected stops stay saved in this browser.</p></div>
+      <div class="mood-grid">
+        <button class="mood-card mood-coast" data-mood="coast"><span class="mood-no">01 / SLOW DOWN</span><span class="mood-icon">≈</span><strong>Coastal calm</strong><small>Sea air, shoreline walks & open skies</small><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-history" data-mood="heritage"><span class="mood-no">02 / LOOK CLOSER</span><span class="mood-icon">⌂</span><strong>History hunter</strong><small>Forts, landmarks & local stories</small><span class="mood-arrow">↗</span></button>
+        <button class="mood-card mood-green" data-mood="leisure"><span class="mood-no">03 / BREATHE OUT</span><span class="mood-icon">✳</span><strong>Green escape</strong><small>Gardens, nature & easy afternoons</small><span class="mood-arrow">↗</span></button>
+      </div>
+      <div class="planner" id="plan">
+        <div class="planner-intro"><p class="eyebrow"><span></span> YOUR PERSONAL CITY TRAIL</p><h3>Build your<br><em>own itinerary.</em></h3><p>Save places from the guide and they'll appear here. Rearrange your stops or open the map for directions.</p><div class="planner-actions"><button class="button button-coral" id="openRoute">Open route in Maps ↗</button><button class="text-button" id="clearPlan">Clear itinerary</button></div></div>
+        <div class="itinerary-panel"><div class="itinerary-top"><span>MY MIRA TRAIL</span><span id="planCount">0 STOPS</span></div><div id="itineraryList" class="itinerary-list"><div class="itinerary-empty"><span>＋</span><p>Your trail starts with a place you love.</p><small>Tap the heart on any place card to add it here.</small></div></div><div class="itinerary-bottom"><span>YOUR PLAN IS SAVED ON THIS DEVICE</span><button id="sharePlan">SHARE MY TRAIL ↗</button></div></div>
+      </div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div class="community-photo"></div><div class="community-content"><div class="section-index light-index">04 <span>— PEOPLE MAKE A PLACE</span></div><p class="eyebrow light"><span></span> MORE THAN A DESTINATION</p><h2>Keep the stories<br>close. Let the<br><em>world find them.</em></h2><p>Local guides, makers, performers, food entrepreneurs and neighbourhood storytellers are the living heart of Mira-Bhayandar. A connected cultural ecosystem can help them reach new audiences and create meaningful livelihoods.</p><div class="community-points"><div><b>01</b><span>Visibility for local talent</span></div><div><b>02</b><span>Stronger community pride</span></div><div><b>03</b><span>More meaningful visits</span></div></div><a class="button button-light" href="#join">Be part of the story <span>↗</span></a></div>
+    </section>
+
+    <section class="reviews-section section-pad" id="reviews">
+      <div class="section-index">05 <span>— VISITOR VOICES</span></div>
+      <div class="section-heading"><div><p class="eyebrow"><span></span> A SPACE FOR REAL EXPERIENCES</p><h2>Every visit has<br>a <em>point of view.</em></h2></div><p class="section-aside">Been somewhere in Mira-Bhayandar? Share a genuine tip or experience to help the next explorer.</p></div>
+      <div class="reviews-layout"><div class="review-feature"><div class="quote-mark">“</div><p>Our city's best stories are often the ones we pass every day without noticing.</p><span>THE MIRA HERITAGE BELIEF</span></div><div class="review-list" id="reviewList"><div class="review-empty">No community reviews yet. Be the first to share a real experience.</div></div></div>
+      <form class="review-form" id="reviewForm"><div class="form-heading"><span>ADD YOUR VOICE</span><span class="form-stars" id="starPicker" aria-label="Choose rating"><button type="button" data-star="1">★</button><button type="button" data-star="2">★</button><button type="button" data-star="3">★</button><button type="button" data-star="4">★</button><button type="button" data-star="5" class="selected">★</button></span></div><div class="form-fields"><input id="reviewName" maxlength="35" placeholder="Your name" required><input id="reviewPlace" maxlength="55" placeholder="Place you visited" required><textarea id="reviewText" maxlength="280" placeholder="Share a helpful, honest experience (max 280 characters)" required></textarea></div><div class="form-submit"><small>Reviews are stored in this browser on this device.</small><button class="button button-dark" type="submit">Publish review ↗</button></div></form>
+    </section>
+
+    <section class="join-section section-pad" id="join"><div class="join-decoration">MH</div><div class="section-index">06 <span>— GET INVOLVED</span></div><div class="join-content"><p class="eyebrow"><span></span> THIS CITY IS A COLLECTIVE STORY</p><h2>Know a hidden gem?<br><em>We want to hear it.</em></h2><p>Recommend a place, share a local tradition or tell us about a community initiative worth discovering.</p><form id="suggestionForm" class="suggestion-form"><input id="suggestionName" placeholder="Your name" required maxlength="50"><input id="suggestionEmail" type="email" placeholder="Email address" required><select id="suggestionType" required><option value="">What would you like to share?</option><option>A heritage place or landmark</option><option>A local artisan or small business</option><option>A cultural tradition or event</option><option>A nature spot or public space</option><option>Something else</option></select><textarea id="suggestionMessage" placeholder="Tell us a little about it..." required maxlength="500"></textarea><button class="button button-coral" type="submit">Send your suggestion <span>↗</span></button></form><p class="form-feedback" id="suggestionFeedback" aria-live="polite"></p></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-symbol">M<span>H</span></span><span class="brand-name">MIRA <i>HERITAGE</i><small>THE COAST HAS STORIES</small></span></a><p>Made with curiosity & local pride.<br>For the stories of Mira-Bhayandar.</p><div class="footer-links"><a href="#explore">Explore</a><a href="#plan">My itinerary</a><a href="#reviews">Reviews</a><a href="#join">Contribute</a></div><div class="footer-bottom"><span>© 2026 MIRA HERITAGE</span><span>DISCOVER LOCAL. LEAVE A LIGHT FOOTPRINT.</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+
+  <div class="modal-backdrop" id="placeModal" aria-hidden="true"><section class="place-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="modal-image" id="modalImage"></div><div class="modal-copy"><p class="eyebrow" id="modalCategory"></p><h2 id="modalTitle"></h2><p class="modal-description" id="modalDescription"></p><div class="modal-meta" id="modalMeta"></div><div class="modal-actions"><a class="button button-coral" id="modalMap" target="_blank" rel="noopener">Get directions ↗</a><button class="button button-dark" id="modalSave">♡ Save place</button></div><p class="modal-note" id="modalNote"></p></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
